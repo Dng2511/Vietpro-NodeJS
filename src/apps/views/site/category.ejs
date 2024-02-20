@@ -1,0 +1,43 @@
+<%- include("./layout/head", {title: "Category"})%>
+<%- include("./layout/header")%>
+
+
+
+<!--	Body	-->
+<div id="body">
+	<div class="container">
+    	<div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+                <nav>
+        	        <%- include("./layout/menu") %>
+                </nav>
+            </div>
+        </div>
+        <div class="row">
+        	<div id="main" class="col-lg-8 col-md-12 col-sm-12">
+            	<!--	Slider	-->
+                <%- include("./layout/slider") %>
+                <!--	End Slider	-->
+                
+                <!--	List Product	-->
+                <div class="products">
+                    <h3><%= category[0].title %> (hiện có <%= totalRows %> sản phẩm)</h3>
+                    <div class="product-list card-deck">
+                        <% for (item of products) { %>
+                            <%- include("./layout/product-card", {item}) %>
+                        <% } %>
+                    </div>
+                </div>
+                <!--	End List Product	-->
+                
+                <%- include("./layout/pagination")%>
+                
+            </div>
+            
+            <%-include("./layout/sidebar")%>
+        </div>
+    </div>
+</div>
+<!--	End Body	-->
+
+<%- include("./layout/footer") %>
