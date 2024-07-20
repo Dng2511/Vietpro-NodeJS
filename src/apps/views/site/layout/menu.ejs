@@ -1,0 +1,9 @@
+
+        <div id="menu" class="collapse navbar-collapse">
+            <ul>
+                <% for(item of categories) { %>
+                <li class="menu-item"><a href="/category/<%= item.slug%>"><%= item.title%></a></li>
+                <% } %>
+                
+            </ul>
+        </div>

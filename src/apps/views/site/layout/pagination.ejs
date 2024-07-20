@@ -1,0 +1,17 @@
+<div id="pagination">
+    <ul class="pagination">
+        <%if(hasPrev){%>
+            <li class="page-item"><a class="page-link" href="<%=path%>page=<%=prev%>">&laquo;</a></li> 
+        <%}%>
+        <% for(item of pagination){ %>
+            <%if(item ==="..."){%>
+                <li class="page-item"><a class="page-link"><%= item%></a></li>
+            <%}else{%>     
+        <li class="page-item"><a class="page-link" href="<%=path%>page=<%=item%>"><%= item%></a></li>
+            <%}%>
+        <%}%>
+        <%if(hasNext){%>
+        <li class="page-item"><a class="page-link" href="<%=path%>page=<%=next%>">&raquo;</a></li>
+        <%}%>
+    </ul>
+</div>
