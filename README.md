@@ -8,7 +8,7 @@ mongorestore --db vp_shop_project dump/vietpro_mongodb
 ```
 
 
-Download the library
+Download library
 ```bash
 npm install
 ```
